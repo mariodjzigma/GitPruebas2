@@ -1,0 +1,36 @@
+﻿body {
+background-color: #ffd800;
+font-family:Calibri,'Comic Sans MS','Arial Unicode MS';
+image-orientation:auto;
+border-top-color:red;
+color:blue;
+
+}
+h1 {
+color: yellow; background-color:peru;
+}
+.field-validation-error {
+color:#f00;
+}
+.field-validation-valid {
+    display:none;
+}
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color:#fee;
+}
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+.valitation-summary-valid {
+    display: none;
+}
+body {
+text-align:center;
+
+}
+ActionLink {
+color: red;
+}
+
