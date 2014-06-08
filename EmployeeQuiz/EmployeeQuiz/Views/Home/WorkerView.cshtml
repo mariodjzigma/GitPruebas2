@@ -1,0 +1,109 @@
+﻿@model EmployeeQuiz.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>WorkerView</title>
+</head>
+<body>
+
+    
+
+    <div id="header-wrapper">
+        
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon icon-cog"></span>
+            <center><img src="~/Photos/Itgam.png" width="200" height="200"/></center>
+			<h2><center><font color="white" face="calibri light" size="8">Resultado</h2></font></center>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active">@Html.ActionLink("Inicio", "Index");</li>
+				<li><a href="#" accesskey="2" title="">ALUMNOS</a></li>
+				<li><a href="#" accesskey="3" title="">OFERTA ACADEMICA</a></li>
+				<li><a href="#" accesskey="4" title="">HISTORIA</a></li>
+				<li><a href="#" accesskey="5" title="">CONTACTO</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="banner" class="container"></div>
+	<div id="welcome" class="container">
+    	
+<div class="title">
+      @{
+          try {
+              
+        <img src="@Url.Content(Model.PhotoPath)"
+            alt="Sample Image"
+            width="200" height="200" />
+        <img src="@Url.Content(Model.Photo)"
+            alt="Sample Image"
+            width="200" height="200" />
+        <p>
+            <b>ID:</p>@Model.Id
+        <p>
+            <b>MARCA:</b>@Model.Marca
+        </p>
+        <p>
+            <b>MODELO:</b>@Model.Modelo
+        </p>
+        <p>
+            <b>COLOR:</b>@Model.Color
+        </p>
+        <p>
+            <b>ESTACIONAMIENTO:</b>@Model.Estacionamiento
+        </p>
+        <p>
+            <b>PRECIO:</b>@Model.Precio
+        </p>
+      }
+      catch(Exception){
+      @:<center><b id="Error">EL VEHÍCULO NO HA SIDO ENCONTRADO</b>
+      }
+      }
+
+		</div>
+	<div id="three-column" class="container">
+		<div><span class="arrow-down"></span></div>
+		<div id="tbox1">
+			<div class="title">
+				
+			</div>
+			 </div>
+		<div id="tbox2">
+			<div class="title">
+				<h2>  </h2>
+			</div>
+			
+            
+
+         @using (Html.BeginForm()) { 
+        
+      
+            <p>@Html.TextAreaFor(m => m.Id)</p>
+            <input type="submit" value="Buscar vehiculo" />   
+        } 
+            
+             </div>
+		<div id="tbox3">
+			<div class="title">
+				
+			</div>
+			 </div>
+	</div>
+	
+
+    <div>
+    </div>
+</body>
+</html>

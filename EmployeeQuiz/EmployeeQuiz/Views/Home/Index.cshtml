@@ -1,0 +1,84 @@
+﻿@model EmployeeQuiz.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css"
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+
+    <div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon icon-cog"></span> 
+            <center><img src="~/Photos/Itgam.png" /></center>
+			<h2><center><font color="white" face="calibri light" size="8">INSTITUTO TECNOLÓGICO DE GUSTAVO A. MADERO</h2></font></center>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active">@Html.ActionLink("Inicio", "Index");</li>
+				<li><a href="#" accesskey="2" title="">Alumnos</a></li>
+				<li><a href="#" accesskey="3" title="">Oferta Educativa</a></li>
+				<li><a href="#" accesskey="4" title="">Directorio</a></li>
+				<li><a href="#" accesskey="5" title="">Contacto</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="banner"class="container"></div>
+	<div id="welcome" class="container">
+
+
+        <div id="banner" class="container">
+            <img src="/Photos/banner.jpg" width="1200" height="500" alt="" />
+        </div>
+     	
+<div class="title">
+	  <h2><font color="white" face="calibri light" size="10">Estacionamiento</h2></font>
+		</div>
+		</div>
+	    <div id="three-column" class="container">
+		
+		<div id="tbox1">
+			<div class="title">
+				
+			</div>
+			 </div>
+		<div id="tbox2">
+			<div class="title">
+				<h2> <center><font color="BLACK" face="calibri light"><samp>INGRESE EL NÚMERO DEL VEHÍCULO</samp></h2></font></center>
+			</div>   
+
+         @using (Html.BeginForm()) { 
+        
+             @Html.ValidationSummary()
+      
+            <p>@Html.TextAreaFor(m => m.Id)</p>
+            <center><input type="submit" value="Buscar vehiculo" /></center>
+        } 
+            
+             </div>
+		<div id="tbox3">
+			<div class="title">
+				
+			</div>
+			 </div>
+	</div>
+	
+
+
+
+        
+    
+    
+
+</body>
+</html>
